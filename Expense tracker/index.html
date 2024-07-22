@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Expense Tracker</h1>
+        </header>
+        <section class="input-section">
+            <input type="text" id="expense-description" placeholder="Description">
+            <input type="number" id="expense-amount" placeholder="Amount (INR)">
+            <input type="date" id="expense-date">
+            <button id="add-expense">Add Expense</button>
+        </section>
+        <section class="filter-section">
+            <label for="filter">Filter by:</label>
+            <select id="filter">
+                <option value="all">All</option>
+                <option value="date">Date</option>
+                <option value="amount">Amount</option>
+                <option value="description">Description</option>
+            </select>
+            <input type="text" id="filter-value" placeholder="Enter filter value">
+            <button id="apply-filter">Apply Filter</button>
+        </section>
+        <section class="expenses-list">
+            <h2>Expenses</h2>
+            <ul id="expense-list"></ul>
+        </section>
+        <section class="total-section">
+            <h2>Total: ₹<span id="total-amount">0.00</span></h2>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
